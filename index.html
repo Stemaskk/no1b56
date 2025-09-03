@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buildings 5 & 6 — Unified Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="container">
+    <h1>Buildings 5 &amp; 6 Questionnaire</h1>
+    <p class="subtitle">Answer all questions and click “Check Answers”. Get them all right to reveal the code.</p>
+</header>
+
+<main class="container">
+    <form id="quiz-form" class="qa-form" novalidate>
+        <section class="card" aria-labelledby="b56-title">
+            <h2 id="b56-title">Buildings 5 &amp; 6</h2>
+
+            <!-- Q1 -->
+            <fieldset class="q">
+                <legend>1) Where is <strong>Ohlone Student Life</strong> located in?</legend>
+                <div class="choices">
+                    <label><input type="radio" name="b56-osl-floor" value="Floor 1"> Floor 1</label>
+                    <label><input type="radio" name="b56-osl-floor" value="Floor 2"> Floor 2</label>
+                    <label><input type="radio" name="b56-osl-floor" value="Floor 3"> Floor 3</label>
+                </div>
+            </fieldset>
+
+            <!-- Q2 -->
+            <fieldset class="q">
+                <legend>2) What does <strong>MCS</strong> stand for?</legend>
+                <input id="b56-mcs" name="b56-mcs" type="text" placeholder="Type the full name…" required />
+                <small class="help">Accepts “Multicultural Student Center” or “Multicultural Student” (case/spaces ignored).</small>
+            </fieldset>
+
+            <!-- Q3 -->
+            <fieldset class="q">
+                <legend>3) What is located on <strong>Floor 1 of Building 6</strong>?</legend>
+                <div class="choices">
+                    <label><input type="radio" name="b56-b6f1" value="Ohlone Student Store"> Ohlone Student Store</label>
+                    <label><input type="radio" name="b56-b6f1" value="Library"> Library</label>
+                    <label><input type="radio" name="b56-b6f1" value="Ohlone Student Life"> Ohlone Student Life</label>
+                    <label><input type="radio" name="b56-b6f1" value="Deaf Counseling Center"> Deaf Counseling Center</label>
+                </div>
+            </fieldset>
+
+            <!-- Q4 -->
+            <fieldset class="q">
+                <legend>4) How much does the <strong>Tonkotsu Instant Noodles</strong> cost at the Cafeteria?</legend>
+                <input id="b56-noodles" name="b56-noodles" type="text" placeholder="$4.95" required />
+                <small class="help">Accepts $4.95 or 4.95.</small>
+            </fieldset>
+
+            <!-- Q5 -->
+            <fieldset class="q">
+                <legend>5) What is held weekly in the big conference room in Ohlone Student Life (open to the public)?</legend>
+                <div class="choices">
+                    <label><input type="radio" name="b56-weekly" value="ASOC meeting"> ASOC meeting</label>
+                    <label><input type="radio" name="b56-weekly" value="Transfer workshop"> Transfer workshop</label>
+                    <label><input type="radio" name="b56-weekly" value="Faculty Meeting"> Faculty Meeting</label>
+                    <label><input type="radio" name="b56-weekly" value="Secant Club meetings"> Secant Club meetings</label>
+                </div>
+            </fieldset>
+
+            <div class="actions">
+                <button id="checkAll" type="submit" class="btn">Check Answers</button>
+                <button type="button" class="btn ghost" id="resetAll">Reset</button>
+            </div>
+        </section>
+    </form>
+
+    <section class="card" aria-labelledby="results-title">
+        <h2 id="results-title">Results</h2>
+        <output id="results" class="output" aria-live="polite"></output>
+    </section>
+</main>
+
+<!-- Modal -->
+<div id="modal-overlay" class="overlay hidden" aria-hidden="true"></div>
+<div id="access-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h3 id="modal-title">Access Granted</h3>
+    <p>Your code is:</p>
+    <pre class="access-code">0$L</pre>
+    <div class="modal-actions">
+        <button id="modal-ok" class="btn">OK</button>
+    </div>
+</div>
+
+<footer class="container footer">
+    <small>All checking is done locally in your browser.</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
