@@ -32,21 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
             .replace(/[,$\s]/g, "");
     }
 
-    // ---------- answer key (same as yours) ----------
+    // ---------- answer key ----------
     const correct = {
         // Q1
         "b56-osl-floor": "Floor 3",
 
-        // Q2 accept either full or short form, case/space-insensitive
+        // Q2 (accept either full or short form, case/space-insensitive)
         "b56-mcs-accepted": [
             "multiculturalstudentcenter",
             "multiculturalstudent"
         ],
 
-        // Q3
-        "b56-b6f1": "Ohlone Student Store",
+        // Q3 (corrected to Deaf Counseling Center)
+        "b56-b6f1": "Deaf Counseling Center",
 
-        // Q4 price; accept $4.95 or 4.95
+        // Q4 (price; accept $4.95 or 4.95)
         "b56-noodles": "4.95",
 
         // Q5
